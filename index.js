@@ -43,3 +43,10 @@ class ProxyApplier {
   }
 
 }
+
+module.exports = {
+  ProxyApplier,
+  extras: {
+    PrUrl
+  }
+}
