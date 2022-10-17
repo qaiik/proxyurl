@@ -38,8 +38,8 @@ class ProxyApplier {
     }
   }
   
-  Proxy(proxyurl) {
-    this.url = new PrUrl(proxyurl).navigates(encodeURIComponent(this.url))
+  Proxy(proxyurl, querystring="") {
+    this.url = new PrUrl(proxyurl).navigates(querystring + encodeURIComponent(this.url))
   }
 
 }
