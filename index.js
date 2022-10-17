@@ -34,12 +34,12 @@ class ProxyApplier {
   MainUrl(d) {
     let pr = new PrUrl(this.url)
     if (!pr.isAbs()) {
-      this.url = new PrUrl(this.url).navigates(d)
+      this.url = new PrUrl(d).navigates(this.url)
     }
   }
   
   Proxy(proxyurl) {
-    this.url = new PrUrl(proxyurl).navigates(proxyurl)
+    this.url = new PrUrl(proxyurl).navigates(encodeURIComponent(this.url))
   }
 
 }
